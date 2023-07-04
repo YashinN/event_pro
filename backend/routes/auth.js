@@ -21,7 +21,7 @@ router.get("/logout", (req, res) => {
   req.logout();
   // redirect to home page
   res.redirect(process.env.CLIENT_URL);
-  console.log(req.user);
+  // console.log(req.user);
 });
 
 // route to authenticate goodle login.
