@@ -6,6 +6,7 @@ const passport = require("passport");
 const cookieSession = require("cookie-session");
 const passportSetup = require("./middleware/passport");
 const bodyParser = require("body-parser");
+const helmet = require("helmet");
 const PORT = process.env.PORT || 4000;
 
 //Routes
@@ -23,6 +24,10 @@ connectDB();
 // increase request limit to 50mb
 app.use(bodyParser.json({ limit: "50mb" }));
 // app.use(cors());
+
+// helmet secure
+app.use(helmet());
+
 // uses cookie session
 app.use(
   cookieSession({
