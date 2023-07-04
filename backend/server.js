@@ -22,7 +22,7 @@ connectDB();
 
 // increase request limit to 50mb
 app.use(bodyParser.json({ limit: "50mb" }));
-app.use(cors());
+// app.use(cors());
 // uses cookie session
 app.use(
   cookieSession({
@@ -38,7 +38,11 @@ app.use(passport.session());
 
 app.use(
   cors({
-    origin: "https://wakeful-week-production.up.railway.app",
+    origin: [
+      "http://localhost:3000",
+      "https://wakeful-week-production.up.railway.app",
+      "https://eventpro-production.up.railway.app/",
+    ],
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
