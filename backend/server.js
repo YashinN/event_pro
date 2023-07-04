@@ -43,7 +43,7 @@ app.use(
       "https://wakeful-week-production.up.railway.app",
       "https://eventpro-production.up.railway.app/",
     ],
-    methods: "GET,POST,PUT,DELETE",
+    methods: "GET,POST,PUT,DELETE,PATCH",
     credentials: true,
   })
 );
