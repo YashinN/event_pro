@@ -2,7 +2,7 @@
 
 ## Description
 
-EventPro is an event tracking and management web application. The main target for the app is conference venues that are consistently holding different events throughout the year and require a system where they can add, display,display and track all hosted events. EventPro will be a platform to effectively manage events through a CMS that will allow admin users to manage event content. The app will also provide a simple user interface for users to view and bookmark up-coming events.
+EventPro is an event tracking and management web application. The main target for the app is conference venues that are consistently holding different events throughout the year and require a system where they can add, display, and track all hosted events. EventPro will be a platform to effectively manage events through a CMS that will allow admin users to manage event content. The app will also provide a simple user interface for users to view and bookmark upcoming events.
 
 ## Built with
 - Mongo DB
@@ -41,24 +41,24 @@ https://wakeful-week-production.up.railway.app/
 - Helmet middleware is installed to secure the node.js express portion of the application and apply security headers.
 - Jwt authentication is used to generate tokens for signed in users to access the application.
 - Google & Github authentication strategies are used to validate users.
-- Passwords are encryted and hashed.
+- Passwords are encrypted and hashed.
 - .env file is used to inject key backend variables.
   
 
 ## Deployment
-- Production build deployed on railways hosting services.
-- Frontend & Backend deployed seperately for better scalability,performance and modularity.
-- Railways was chosen to host backend as it can host a express server with minimal configuration.
-- Railways was chosen to host frontend and backend to improve app performance and comunication between client,server & mongoDB database. All aspects are hosted in the same region.
+- Production builds deployed on Railways hosting services.
+- Frontend & Backend are deployed separately for better scalability,performance and modularity.
+- Railways was chosen to host backend as it can host an Express server with minimal configuration.
+- Railways was chosen to host frontend and backend to improve app performance and communication between client,server & mongoDB database. All aspects are hosted in the same region.
 
 ## Installation
 
-To install and run simply download the project install the required node modules and run npm start from the '/frontend' directory.
+To install and run simply download the project, install the required node modules and run npm start from the '/frontend' directory.
 
 #### `npm start` 
 
 - Run 'npm start from '/frontend' directory ensure that the app is running on default  "http://localhost:3000".
-- The frontend portion of the app will run locally & connect to the backend hosted on railways.
+- The frontend portion of the app will run locally & connect to the backend hosted on Railways.
 
 #### Backend Configuration
 
@@ -71,9 +71,7 @@ To install and run simply download the project install the required node modules
    GOOGLE_CLIENT_SECRET='Google client secret'  
    GITHUB_CLIENT_ID='Github client id credentials'  
    GITHUB_CLIENT_SECRET='Github client secret'  
-   CLIENT_URL = ' client host eg: http://localhost:3000/ or production client host address'  
-
-
+   CLIENT_URL = ' client host eg: http://localhost:3000/ or production client host address'
 
 
 ## Testing
@@ -88,7 +86,6 @@ To install and run simply download the project install the required node modules
 - From '/backend' run 'npm test'
 
 
-
 # Software Requirements
 
 ## System Architecture
@@ -99,18 +96,18 @@ MongoDb, Express, React, Node.js
 
 ### Frontend Architecture:
 
-The frontend architecture of the application will utilise a vairety of tools React, Javascript, Css and Bootstrap. The nature of the application is going to be dynamic where data will consitently be pulled changed and altered from the client to the backend. To accomodate for the dyncamic nature of the application CRA or create-react-app will be used as a single page application to reduce load times and improve overall performance. The application will be built using react functional components to promote reusable items ,reduce codebase size and save time. To efficently design the UI of the application Bootstrap and a third party stlying frame work called bootswatch will be used. The use of a 3rd party framework means less time will need to be spent building a simple and attractively styled UI , this should drastically reduce the length of the project timeline.
+The frontend architecture of the application will utilise a variety of tools, including React, Javascript, CSS, and Bootstrap. The nature of the application is going to be dynamic, where data will continuously be pulled, changed, and altered from the client to the backend. To accommodate the dynamic nature of the application, CRA, or create-react-app, will be used as a single-page application to reduce load times and improve overall performance. The application will be built using reactive functional components to promote reusable items, reduce the codebase size, and save time. To efficiently design the UI of the application, Bootstrap and a third-party styling framework called Bootswatch will be used. The use of a third-party framework means less time will need to be spent building a simple and attractively styled UI, which should drastically reduce the length of the project timeline.
 
 ### Backend Architecture:
 
-The backend architecture of the application will be built with Express ,MongoDb and Node. A custom express server will be built in order to effectively handle Api requests between client and server. The express server will handle routeing ,the protection of routes and authentication leveraging the appropriate middleware. A third party middleware Helmet will be used to ensure the security of the custom express server. In order to host and store user credentials and event data a MongoDb cloud server will be used. MongoDb will easily allow for future scalablity should the need arise to extend and grow the application. 
+The backend architecture of the application will be built with Express, MongoDB, and Node. A custom Express server will be built in order to effectively handle API requests between client and server. The express server will handle routing, the protection of routes, and authentication, leveraging the appropriate middleware. A third-party middleware framework called Helmet will be used to ensure the security of the custom Express server. In order to host and store user credentials and event data, a MongoDB cloud server will be used. MongoDB will easily allow for future scalability should the need arise to extend and grow the application.
 
 ## System Requirements
 
 ### Functional Reqiurements :
 
 
-1. User registration & Authentication.
+1. User registration & authentication.
    - Users can sign in with email & password.
    - Authenticate users by email and password.
    - Authenticate users with google & facebook auth.
@@ -123,7 +120,7 @@ The backend architecture of the application will be built with Express ,MongoDb 
    - Show case event details ,time ,venue and description.
 
 3. Event Management.
-   - Admin only access to event managment CMS.
+   - Admin only access to event management CMS.
    - Create, edit update and delete events.
    - Mark event as featured.
    - Automatically remove expired events.
@@ -142,21 +139,21 @@ The backend architecture of the application will be built with Express ,MongoDb 
 1. Usability.
    - Simple UI design.
    - Prompts when functions are completed eg: added event.
-   - Seperate app functions by pages.
+   - Separate app functions by pages.
      
 2. Reliability.
-  - All user input for event creation will processed and validated to mitigate end user errors.
-  - Currently no database backup in place. Should the need arise MongoDb service can easily be upgraded to accomodate backup procedures.
+  - All user input for event creation will be processed and validated to mitigate end-user errors.
+  - There is currently no database backup in place. Should the need arise, the MongoDB service can easily be upgraded to accommodate backup procedures.
 
 4. Performance.
-   - App will iniitally run locally for best performance.
-   - South African MongoDb cloud server will be used, better performance for local use.
-   - Should app usage increase database can easily be scaled and upgraded to a better performing tier.
+   - The App will initially run locally for best performance.
+   - A South African MongoDB cloud server will be used for better performance for local use.
+   - Should app usage increase, the database can easily be scaled and upgraded to a better-performing tier.
   
 5. Security. 
-   - Database security is handled by MongoDb and it's data encryption procedures.
+   - Database security is handled by MongoDB and its data encryption procedures.
    - All user passwords will be hashed.
-   - JWT authenitcation will be used for secure user authentication via tokens.
+   - JWT authentication will be used for secure user authentication via tokens.
 
 6. Design Constraints. 
    - App will only be designed for tablet and desktop screen sizes.
@@ -165,11 +162,11 @@ The backend architecture of the application will be built with Express ,MongoDb 
 ### User Stories:
 
 
-1. A guest at a hotel would like to plan activities for there stay and bookmark items. As a registered user they will be able to view events and bookmark said events with a simple click on a bookmark button. The guest will be able to log into the event app and check there events and get key details of the event such as time , date and venue. With these tools they will be able to efficently plan there acitivites.
+1. A guest at a hotel would like to plan activities for their stay and bookmark items. As a registered user, they will be able to view events and bookmark them with a simple click on the bookmark button. The guest will be able to log into the event app and check their events and get key details of the event, such as time, date, and venue. With these tools, they will be able to efficiently plan their activities.
 
-2. A tech company would like to host a series of tech related expos at a events centre , they require the event details to be readily available online for people to see. A admin will be able to log onto the app and add all the tech companies events along with the relevant details , headliner events can be placed in the featured section to be easily seen by potential guests.
+2. A tech company would like to host a series of tech-related expos at an events centre, and they require the event details to be readily available online for people to see. An admin will be able to log onto the app and add all the tech companies events along with the relevant details. Headliner events can be placed in the featured section to be easily seen by potential guests.
 
-3. A company requires one of there events to be canceled due to a guest speaker being ill. They require a way to notify guests that the event has been canceled. A admin should be notified and update the canceled event accordingly . The event status on the app will be changed for all users to see.
+3. A company requires one of their events to be cancelled due to a guest speaker being ill. They require a way to notify guests that the event has been cancelled. An admin should be notified and update the cancelled event accordingly. The event status on the app will be changed for all users to see.
 
 
 
