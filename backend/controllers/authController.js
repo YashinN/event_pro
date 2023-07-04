@@ -13,8 +13,6 @@ const successAuth = async (req, res) => {
     return res.status(400).json({ message: "not O auth" });
   }
 
-  console.log(req.user);
-
   try {
     if (req.user) {
       const email = req.user.emails[0].value;
