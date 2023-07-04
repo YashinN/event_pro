@@ -22,7 +22,7 @@ function App() {
   };
 
   // state to define user.np
-  const [isUser, setIsUser] = useState(null);
+  const [isUser, setIsUser] = useState(setUser());
   // state to handle logged in or not
   const [loggedIn, setLoggedIn] = useState(null);
   // stores all events.
@@ -122,6 +122,7 @@ function App() {
   // use effect checks if google or github has been signed in
   // gets all events
   useEffect(() => {
+    console.log(isUser);
     if (!isUser) {
       getGoogleUser();
     }
