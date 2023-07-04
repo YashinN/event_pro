@@ -123,6 +123,7 @@ function App() {
   // gets all events
   useEffect(() => {
     console.log(isUser);
+    console.log("helooooo!");
     if (!isUser) {
       getGoogleUser();
     }
