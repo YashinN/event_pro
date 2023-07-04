@@ -18,7 +18,7 @@ router.get("/login/failed", (req, res) => {
 // logs out google or github user
 router.get("/logout", (req, res) => {
   // clears user logout credentials.
-  req.session.destroy();
+  req.session = null;
   req.logOut();
   // redirect to home page
   // res.redirect(process.env.CLIENT_URL);
