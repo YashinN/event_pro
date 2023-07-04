@@ -19,7 +19,7 @@ const Navbar = (props) => {
     // removes user from local storage
     localStorage.removeItem("user");
     // sets logged in state to false
-    props.setLoggedIn(false);
+    // props.setLoggedIn(false);
     logoutRequest();
   };
 
