@@ -21,9 +21,8 @@ function App() {
     return null;
   };
 
-  // state to define user.
-  const [isUser, setIsUser] = useState(null);
-  // const [isUser, setIsUser] = useState(setUser());
+  // state to define user.np
+  const [isUser, setIsUser] = useState(setUser());
   // state to handle logged in or not
   const [loggedIn, setLoggedIn] = useState(null);
   // stores all events.
@@ -78,56 +77,54 @@ function App() {
   };
 
   // req to verify google and github login
-  // const getGoogleUser = async () => {
-  //   // fetch req to server/
-  //   const response = await fetch(process.env.REACT_APP_SUCCESS, {
-  //     method: "GET",
-  //     credentials: "include",
-  //     headers: {
-  //       Accept: "application/json",
-  //       "Content-Type": "application/json",
-  //       "Access-Control-Allow-Credentials": true,
-  //     },
-  //   });
+  const getGoogleUser = async () => {
+    // fetch req to server/
+    const response = await fetch(process.env.REACT_APP_SUCCESS, {
+      method: "GET",
+      credentials: "include",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Credentials": true,
+      },
+    });
 
-  //   // stores user details.
-  //   const data = await response.json();
-  //   if (response.ok) {
-  //     // gets user email address
-  //     const user = data.user["emails"];
-  //     const email = user[0].value;
-  //     const isAdmin = data.isAdmin;
-  //     const token = data.token;
-  //     // stores user data in local storage.
-  //     localStorage.setItem(
-  //       "user",
-  //       JSON.stringify({ email: email, isAdmin, token })
-  //     );
-  //     // sets users
-  //     setIsUser(setUser());
-  //   }
-  // };
+    // stores user details.
+    const data = await response.json();
+    if (response.ok) {
+      // gets user email address
+      const user = data.user["emails"];
+      const email = user[0].value;
+      const isAdmin = data.isAdmin;
+      const token = data.token;
+      // stores user data in local storage.
+      localStorage.setItem(
+        "user",
+        JSON.stringify({ email: email, isAdmin, token })
+      );
+      // sets users
+      setIsUser(setUser());
+    }
+  };
 
   // use effect run everytime a user logs in/out or sign up
-  // useEffect(() => {
-  //   // gets user from local storage.
-  //   const user = JSON.parse(localStorage.getItem("user"));
-  //   if (user) {
-  //     // if user exists sets isUser state.
-  //     setIsUser(user);
-  //   } else {
-  //     setIsUser(null);
-  //   }
-  // }, [loggedIn]);
+  useEffect(() => {
+    // gets user from local storage.
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user) {
+      // if user exists sets isUser state.
+      setIsUser(user);
+    } else {
+      setIsUser(null);
+    }
+  }, [loggedIn]);
 
   // use effect checks if google or github has been signed in
   // gets all events
   useEffect(() => {
-    // console.log(isUser);
-    // console.log("helooooo!");
-    // if (!isUser) {
-    //   getGoogleUser();
-    // }
+    if (!isUser) {
+      getGoogleUser();
+    }
 
     getEvents();
   }, []);
@@ -150,7 +147,6 @@ function App() {
           setMyEvents={setMyEvents}
         />
         <div className="pages">
-          <h1>skdnfkdsnkfnkdsnfk</h1>
           <Routes>
             <Route
               path="/"
