@@ -19,7 +19,6 @@ router.get("/login/failed", (req, res) => {
 router.get("/logout", (req, res) => {
   // clears user logout credentials.
   req.logout();
-  req.session = null;
   // redirect to home page
 });
 

@@ -91,6 +91,11 @@ function App() {
 
     // stores user details.
     const data = await response.json();
+
+    if (isUser) {
+      return;
+    }
+
     if (response.ok) {
       // gets user email address
       const user = data.user["emails"];
