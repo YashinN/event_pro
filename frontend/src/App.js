@@ -122,6 +122,7 @@ function App() {
   // use effect checks if google or github has been signed in
   // gets all events
   useEffect(() => {
+    console.log(isUser);
     if (!isUser) {
       getGoogleUser();
     }
