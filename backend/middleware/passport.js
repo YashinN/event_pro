@@ -42,7 +42,8 @@ passport.use(
     {
       clientID: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
-      callbackURL: "/auth/github/callback",
+      callbackURL:
+        "https://eventpro-production.up.railway.app/auth/github/callback",
       scope: ["user:email"],
     },
     function (accessToken, refreshToken, profile, done) {
