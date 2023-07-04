@@ -2,7 +2,36 @@
 
 ## Description
 
-EventPro is going to be a an event tracking and managment web application. The main target for the app is conference venues that are consistently holding different events through out the year and require a system where they can add ,display and track all hosted events. The EventPro will be a platform to effectively manage events through a CMS that will allow admin users to manage event content. The app will also provide a simple user interface for users to view and bookmark up and coming events. 
+EventPro is an event tracking and management web application. The main target for the app is conference venues that are consistently holding different events throughout the year and require a system where they can add, display,display and track all hosted events. EventPro will be a platform to effectively manage events through a CMS that will allow admin users to manage event content. The app will also provide a simple user interface for users to view and bookmark up-coming events.
+
+## Link To Production Site
+
+https://wakeful-week-production.up.railway.app/
+
+
+## How it works?
+
+1. End user not logged in.
+   - Has only viewing access.
+   - Anyone can access the app wuithout logging in.
+   - View events only.
+
+2. End user logged in.
+   - View events.
+   - Save events to users my events list for later refrence.
+   - Remove events from users my events list.
+
+3. Admin user.
+   - Has the same capabilities as a normal end user.
+   - Can manage events create,edit,delete and update events.
+     
+4.Demo Admin.
+-In order to demo the admin functionality the login page has a button to sign in as a admin.
+   
+
+
+
+
 
 
 # Software Requirements
