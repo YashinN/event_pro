@@ -22,7 +22,7 @@ connectDB();
 
 // increase request limit to 50mb
 app.use(bodyParser.json({ limit: "50mb" }));
-
+app.use(cors());
 // uses cookie session
 app.use(
   cookieSession({
