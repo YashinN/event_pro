@@ -77,35 +77,35 @@ function App() {
   };
 
   // req to verify google and github login
-  const getGoogleUser = async () => {
-    // fetch req to server/
-    const response = await fetch(process.env.REACT_APP_SUCCESS, {
-      method: "GET",
-      credentials: "include",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Credentials": true,
-      },
-    });
+  // const getGoogleUser = async () => {
+  //   // fetch req to server/
+  //   const response = await fetch(process.env.REACT_APP_SUCCESS, {
+  //     method: "GET",
+  //     credentials: "include",
+  //     headers: {
+  //       Accept: "application/json",
+  //       "Content-Type": "application/json",
+  //       "Access-Control-Allow-Credentials": true,
+  //     },
+  //   });
 
-    // stores user details.
-    const data = await response.json();
-    if (response.ok) {
-      // gets user email address
-      const user = data.user["emails"];
-      const email = user[0].value;
-      const isAdmin = data.isAdmin;
-      const token = data.token;
-      // stores user data in local storage.
-      localStorage.setItem(
-        "user",
-        JSON.stringify({ email: email, isAdmin, token })
-      );
-      // sets users
-      setIsUser(setUser());
-    }
-  };
+  //   // stores user details.
+  //   const data = await response.json();
+  //   if (response.ok) {
+  //     // gets user email address
+  //     const user = data.user["emails"];
+  //     const email = user[0].value;
+  //     const isAdmin = data.isAdmin;
+  //     const token = data.token;
+  //     // stores user data in local storage.
+  //     localStorage.setItem(
+  //       "user",
+  //       JSON.stringify({ email: email, isAdmin, token })
+  //     );
+  //     // sets users
+  //     setIsUser(setUser());
+  //   }
+  // };
 
   // use effect run everytime a user logs in/out or sign up
   useEffect(() => {
