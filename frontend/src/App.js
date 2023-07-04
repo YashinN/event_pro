@@ -1,4 +1,10 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+  HashRouter,
+} from "react-router-dom";
 import { useState, useEffect } from "react";
 
 // comonents.
@@ -141,7 +147,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouterRouter>
         <Navbar
           user={isUser}
           setLoggedIn={setLoggedIn}
@@ -206,10 +212,10 @@ function App() {
                 )
               }
             />
-            <Route path="*" element={<Navigate to="/" />} />
+            <Route path="*" element={<HomePage events={events} />} />
           </Routes>
         </div>
-      </BrowserRouter>
+      </HashRouterRouter>
     </div>
   );
 }
