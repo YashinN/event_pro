@@ -149,6 +149,7 @@ function App() {
           setMyEvents={setMyEvents}
         />
         <div className="pages">
+          <h1>skdnfkdsnkfnkdsnfk</h1>
           <Routes>
             <Route
               path="/"
