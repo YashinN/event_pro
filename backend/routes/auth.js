@@ -29,7 +29,7 @@ router.get(
   passport.authenticate("google", { scope: ["profile", "email"] })
 );
 
-// google callback to navigate to google login client.
+// google callback to navigate to google login client
 router.get(
   "/google/callback",
   passport.authenticate("google", {
