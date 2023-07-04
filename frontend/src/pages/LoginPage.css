@@ -1,0 +1,47 @@
+.login-container {
+  max-width: 600px !important;
+  border: 1px solid black;
+  margin-top: 10vh;
+}
+
+.btn-switch {
+  border: none;
+  background-color: #fff;
+  text-decoration: underline;
+}
+
+.login-btns {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.auth-icon {
+  width: 30px;
+}
+
+.auth-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.auth-btn-group {
+  display: flex;
+  justify-content: center;
+}
+
+.auth-btn {
+  width: 100%;
+}
+
+.admin-btn {
+  margin-left: auto;
+}

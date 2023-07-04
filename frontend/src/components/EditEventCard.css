@@ -1,0 +1,10 @@
+.delete-btn,
+.edit-btn {
+  width: 100%;
+}
+
+.btn-controls {
+  width: 100%;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+}

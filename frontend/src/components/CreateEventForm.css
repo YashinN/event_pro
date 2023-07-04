@@ -1,0 +1,18 @@
+.time-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.time-container div {
+  width: 40%;
+}
+
+.create-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.loading-container {
+  display: flex;
+  align-items: center;
+}

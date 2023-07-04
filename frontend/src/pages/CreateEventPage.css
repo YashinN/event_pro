@@ -1,0 +1,12 @@
+.create-event-wrapper {
+  max-width: 500px !important;
+  margin-top: 10vh;
+}
+
+.create-event-section {
+  height: 100%;
+}
+
+.form-title {
+  border-bottom: 5px solid gray;
+}

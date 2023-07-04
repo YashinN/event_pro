@@ -1,0 +1,33 @@
+.event-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-card {
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.color-1 {
+  background-color: #15b5b0;
+}
+
+.color-2 {
+  background-color: #f9bdc0;
+}
+
+.color-3 {
+  background-color: #fbe698;
+}
+
+.color-4 {
+  background-color: #ece3f0;
+}
+
+.mark-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}

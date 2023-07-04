@@ -1,0 +1,9 @@
+.event-logo {
+  background-color: #fff;
+  height: 50px;
+}
+
+.login-credentials {
+  display: flex;
+  align-items: center;
+}

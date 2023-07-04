@@ -1,0 +1,21 @@
+.events-wrapper {
+  margin-top: 10vh;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.section-wrapper {
+  margin-bottom: 150px !important;
+}
+
+.main-title {
+  margin-bottom: 100px;
+  border-bottom: 5px solid gray;
+}
+
+.sec-title {
+  margin-top: 80px;
+}
