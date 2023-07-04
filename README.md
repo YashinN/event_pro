@@ -4,6 +4,13 @@
 
 EventPro is an event tracking and management web application. The main target for the app is conference venues that are consistently holding different events throughout the year and require a system where they can add, display,display and track all hosted events. EventPro will be a platform to effectively manage events through a CMS that will allow admin users to manage event content. The app will also provide a simple user interface for users to view and bookmark up-coming events.
 
+## Built with
+- Mongo DB
+- Express Server
+- React
+- Node.js
+
+
 ## Link To Production Site
 
 https://wakeful-week-production.up.railway.app/
@@ -18,19 +25,67 @@ https://wakeful-week-production.up.railway.app/
 
 2. End user logged in.
    - View events.
-   - Save events to users my events list for later refrence.
-   - Remove events from users my events list.
+   - Save events to users 'my events' list for later refrence.
+   - Remove events from users 'my events list'.
 
 3. Admin user.
    - Has the same capabilities as a normal end user.
    - Can manage events create,edit,delete and update events.
-     
-4.Demo Admin.
--In order to demo the admin functionality the login page has a button to sign in as a admin.
-   
+
+4. Demo Admin.
+   - In order to demo the admin functionality the login page has a button to sign in as a admin.
 
 
 
+## Security & Authentication
+- Helmet middleware is installed to secure the node.js express portion of the application and apply security headers.
+- Jwt authentication is used to generate tokens for signed in users to access the application.
+- Google & Github authentication strategies are used to validate users.
+- Passwords are encryted and hashed.
+- .env file is used to inject key backend variables.
+  
+
+## Deployment
+- Production build deployed on railways hosting services.
+- Frontend & Backend deployed seperately for better scalability,performance and modularity.
+- Railways was chosen to host backend as it can host a express server with minimal configuration.
+- Railways was chosen to host frontend and backend to improve app performance and comunication between client,server & mongoDB database. All aspects are hosted in the same region.
+
+## Installation
+
+To install and run simply download the project install the required node modules and run npm start from the '/frontend' directory.
+
+#### `npm start` 
+
+- Run 'npm start from '/frontend' directory ensure that the app is running on default  "http://localhost:3000".
+- The frontend portion of the app will run locally & connect to the backend hosted on railways.
+
+#### Backend Configuration
+
+- To make changes to the backend enviroment variables a  .env file must be added to the root '/backend' directory using the below env variables.
+
+   PORT= 'Server default port'
+   MONGO_URI= 'Connection string to mongoDB cloud database'
+   SECRET= 'JWT secret'
+   GOOGLE_CLIENT_ID= 'Google client id credentials'
+   GOOGLE_CLIENT_SECRET='Google client secret'
+   GITHUB_CLIENT_ID='Github client id credentials'
+   GITHUB_CLIENT_SECRET='Github client secret'
+   CLIENT_URL = ' client host eg: http://localhost:3000/ or production client host address'
+
+
+
+
+## Testing
+
+## Run frontend tests
+
+- From '/frontend' directory run 'npm test'.
+
+## Run backend tests
+
+- NB! backend tests require all env variables please see backend connfiguration.
+- From '/backend' run 'npm test'
 
 
 
