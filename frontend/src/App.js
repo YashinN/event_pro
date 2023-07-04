@@ -147,7 +147,7 @@ function App() {
 
   return (
     <div className="App">
-      <HashRouterRouter>
+      <HashRouter>
         <Navbar
           user={isUser}
           setLoggedIn={setLoggedIn}
@@ -215,7 +215,7 @@ function App() {
             <Route path="*" element={<HomePage events={events} />} />
           </Routes>
         </div>
-      </HashRouterRouter>
+      </HashRouter>
     </div>
   );
 }
