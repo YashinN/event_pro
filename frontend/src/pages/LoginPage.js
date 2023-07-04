@@ -127,11 +127,11 @@ const LoginPage = (props) => {
     clearStates();
   };
 
-  useEffect(() => {
-    if (email === "admin@gmail.com" && isAdmin) {
-      loginRequest();
-    }
-  }, [email]);
+  // useEffect(() => {
+  //   if (email === "admin@gmail.com" && isAdmin) {
+  //     loginRequest();
+  //   }
+  // }, [email]);
 
   const demoAdmin = () => {
     setIsAdmin(true);
