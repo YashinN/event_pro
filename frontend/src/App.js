@@ -108,16 +108,16 @@ function App() {
   // };
 
   // use effect run everytime a user logs in/out or sign up
-  useEffect(() => {
-    // gets user from local storage.
-    const user = JSON.parse(localStorage.getItem("user"));
-    if (user) {
-      // if user exists sets isUser state.
-      setIsUser(user);
-    } else {
-      setIsUser(null);
-    }
-  }, [loggedIn]);
+  // useEffect(() => {
+  //   // gets user from local storage.
+  //   const user = JSON.parse(localStorage.getItem("user"));
+  //   if (user) {
+  //     // if user exists sets isUser state.
+  //     setIsUser(user);
+  //   } else {
+  //     setIsUser(null);
+  //   }
+  // }, [loggedIn]);
 
   // use effect checks if google or github has been signed in
   // gets all events
