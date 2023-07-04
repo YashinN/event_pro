@@ -22,7 +22,7 @@ function App() {
   };
 
   // state to define user.np
-  const [isUser, setIsUser] = useState(setUser());
+  const [isUser, setIsUser] = useState(null);
   // state to handle logged in or not
   const [loggedIn, setLoggedIn] = useState(null);
   // stores all events.
