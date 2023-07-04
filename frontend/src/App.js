@@ -147,7 +147,7 @@ function App() {
 
   return (
     <div className="App">
-      <HashRouter hashType="hashbang">
+      <HashRouter>
         <Navbar
           user={isUser}
           setLoggedIn={setLoggedIn}
