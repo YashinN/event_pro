@@ -36,6 +36,14 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use(
+  cors({
+    origin: "https://wakeful-week-production.up.railway.app",
+    methods: "GET,POST,PUT,DELETE",
+    credentials: true,
+  })
+);
+
 // google & github authentication routes
 app.use("/auth", authRoutes);
 // User routes sign Up , Log In
