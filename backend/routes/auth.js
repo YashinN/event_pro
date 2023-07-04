@@ -18,10 +18,10 @@ router.get("/login/failed", (req, res) => {
 // logs out google or github user
 router.get("/logout", (req, res) => {
   // clears user logout credentials.
-  req.session = null;
-  req.logOut();
+  req.logout();
   // redirect to home page
-  // res.redirect(process.env.CLIENT_URL);
+  res.redirect(process.env.CLIENT_URL);
+  console.log(req.user);
 });
 
 // route to authenticate goodle login.
