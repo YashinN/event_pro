@@ -206,7 +206,7 @@ function App() {
                 )
               }
             />
-            <Route path="*" element={<HomePage events={events} />} />
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </div>
       </BrowserRouter>
