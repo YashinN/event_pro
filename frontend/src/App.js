@@ -32,7 +32,7 @@ function App() {
   // loading state for api calls.
   const [loading, setLoading] = useState(true);
 
-  // request to get all events from server.
+  // request to get all events from server
   const getEvents = async () => {
     setLoading(true);
     try {
