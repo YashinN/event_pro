@@ -64,14 +64,14 @@ To install and run simply download the project install the required node modules
 
 - To make changes to the backend enviroment variables a  .env file must be added to the root '/backend' directory using the below env variables.
 
-   PORT= 'Server default port'
-   MONGO_URI= 'Connection string to mongoDB cloud database'
-   SECRET= 'JWT secret'
-   GOOGLE_CLIENT_ID= 'Google client id credentials'
-   GOOGLE_CLIENT_SECRET='Google client secret'
-   GITHUB_CLIENT_ID='Github client id credentials'
-   GITHUB_CLIENT_SECRET='Github client secret'
-   CLIENT_URL = ' client host eg: http://localhost:3000/ or production client host address'
+   PORT= 'Server default port'  
+   MONGO_URI= 'Connection string to mongoDB cloud database'  
+   SECRET= 'JWT secret'  
+   GOOGLE_CLIENT_ID= 'Google client id credentials'  
+   GOOGLE_CLIENT_SECRET='Google client secret'  
+   GITHUB_CLIENT_ID='Github client id credentials'  
+   GITHUB_CLIENT_SECRET='Github client secret'  
+   CLIENT_URL = ' client host eg: http://localhost:3000/ or production client host address'  
 
 
 
