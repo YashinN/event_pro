@@ -117,13 +117,10 @@ const LoginPage = (props) => {
     signupRequest();
   };
 
-  const handleMenu = (e) => {
-    if (switchForm === "Log In") {
-      setSwitchForm("Sign Up");
-    } else {
-      setSwitchForm("Log In");
-    }
-
+  const handleMenu = () => {
+    switchForm === "Log In"
+      ? setSwitchForm("Sign Up")
+      : setSwitchForm("Log In");
     clearStates();
   };
 
@@ -131,7 +128,7 @@ const LoginPage = (props) => {
     if (email === "admin@gmail.com" && isAdmin) {
       loginRequest();
     }
-  }, [email]);
+  }, [email, isAdmin]);
 
   const demoAdmin = () => {
     setIsAdmin(true);
