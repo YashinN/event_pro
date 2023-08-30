@@ -134,7 +134,6 @@ function App() {
   // gets all events
   useEffect(() => {
     getGoogleUser();
-
     getEvents();
   }, []);
 
